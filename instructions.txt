@@ -1,0 +1,16 @@
+Lecture 76 - JavaScript CRUD using a HTML Form and a HTML Table Part 1 
+CRUD
+C = Create
+R = Read
+U = Update
+D = Delete
+
+
+FORM
+
+Table
+
+So we will store some student information
+1. Name
+2. surname
+3. address

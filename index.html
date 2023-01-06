@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Stduent CRUD using HTML Form and a Table</title>
+        <style>
+
+        </style>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <input name="name" type="text" placeholder="Enter your name">
+            <input name="surname" type="text" placeholder="Enter your surname">
+            <input name="address" type="text"  placeholder="Enter your address">
+            <input type="button" value="Save" onclick="sunil()">
+        </form>
+        <hr>
+        <table border="1" id="mytable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Anil</td>
+                    <td>Dollor</td>
+                    <td>Neemuch</td>
+                    <td>
+                        <button>View</button>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            //1. There are 2 ways to define a function
+            //1. Old way
+            function anil(){
+                alert("ANIL");
+            }
+            //2. New Way  Fat Arraw  =>  ES6  2015
+            let x; //Global Variable
+            let n=document.querySelector('input[name="name"]');
+            let sn=document.querySelector('input[name="surname"]');
+            let addr=document.querySelector('input[name="address"]');
+
+            let tbdy = document.querySelector('table#mytable tbody')
+            let sunil=()=>{
+                alert("sunil");
+                let y; //Local Variable
+                console.log(n.value);
+                console.log(sn.value);
+                console.log(addr.value);
+                console.log(tbdy);
+                tbdy.innerHTML +=  `<tr>
+                                        <td>${n.value}</td>
+                                        <td>${sn.value}</td>
+                                        <td>${addr.value}</td>
+                                        <td>
+                                            <button>View</button>
+                                            <button>Edit</button>
+                                            <button onclick="deleteElement(this)">Delete</button>
+                                        </td>
+                                    </tr>`;//Append technique
+                n.value =  sn.value=  addr.value='';               
+            }
+
+            let deleteElement = (z)=>{
+                //alert("Hurrey");
+                //console.log(z);
+                z.closest('tr').remove();
+                console.log(z.closest('tr'));
+            }
+            
+        </script>
+    </body>
+</html>
