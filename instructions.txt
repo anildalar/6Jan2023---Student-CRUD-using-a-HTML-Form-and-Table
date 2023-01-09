@@ -17,3 +17,9 @@ So we will store some student information
 
 
 cdn = content delivery network
+
+Validations
+
+Types of Validation
+1. Clientside Validation (JS ) (Frontend Developer)
+2. Severside Validation  (NodeJs) (Backend Developer)
