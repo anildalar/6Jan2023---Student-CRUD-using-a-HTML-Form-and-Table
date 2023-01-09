@@ -14,3 +14,6 @@ So we will store some student information
 1. Name
 2. surname
 3. address
+
+
+cdn = content delivery network
